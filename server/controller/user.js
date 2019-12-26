@@ -68,3 +68,6 @@ module.exports = {
 
 
 }
+
+// models.sequelize.query(`SELECT meses::json->0->>'id_planilla' as id_planilla FROM "ddjj_planilla" AS "ddjj_planilla" WHERE "ddjj_planilla"."fid_planilla_base" IN (1, 6);`, {model: models.planilla})
+// .then(respuesta => {
