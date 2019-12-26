@@ -10,7 +10,7 @@ module.exports = {
             });
 
             if(userCollection){
-                const postCollection = await Post.find({
+                const postCollection = await Post.findAll({
                     userId : req.params.userId
                 })
 

@@ -1,0 +1,25 @@
+
+
+curl -X GET \
+  http://localhost:3456/api \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: efb90a72-2718-d794-0aea-1a14f7af1b06'
+
+curl -X GET \
+  http://localhost:3456/api/2/posts \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: efb90a72-2718-d794-0aea-1a14f7af1b06'
+
+curl -X POST \
+  http://localhost:3000/auth \
+  -H 'authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MDY1MTc1NDIsInBlcm1pc3Npb25zIjp7InNvbGljaXR1ZGVzLXBhZ286Y3JlYXRlIjp0cnVlLCJzb2xpY2l0dWRlcy1wYWdvOnVwZGF0ZSI6dHJ1ZSwic29saWNpdHVkZXMtcGFnbzpyZWFkIjp0cnVlLCJwbGFuaWxsYXMtcGxhdGFmb3JtYTpjcmVhdGUiOnRydWV9LCJ1c2VyIjp7ImlkRW50aWRhZCI6MSwiaWRTdWN1cnNhbCI6MywiaWRVc3VhcmlvIjozLCJpZFVzYXJpbyI6M30sImlhdCI6MTU3NDk4MTU0M30.ddilkl_vzij6hvcpk-o7zumveCrRlEhUKEqZ7WEW6ec' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: efb90a72-2718-d794-0aea-1a14f7af1b06' \
+  -d '{
+ "user": "2019-07-02",
+ "password": "123456"
+}'
+
