@@ -71,3 +71,17 @@ module.exports = {
 
 // models.sequelize.query(`SELECT meses::json->0->>'id_planilla' as id_planilla FROM "ddjj_planilla" AS "ddjj_planilla" WHERE "ddjj_planilla"."fid_planilla_base" IN (1, 6);`, {model: models.planilla})
 // .then(respuesta => {
+
+
+
+
+
+
+
+// return models.sequelize.query(`SELECT sum(pd.total_ganado_desp_duo) as total_ganado_desp_duo,
+// WHERE pd.fid_planilla IN (${idsPlanillas.join(',')})
+// GROUP BY nombres, paterno, materno, tipo_documento, nro_documento, complemento, fecha_nacimiento, estado_verificacion, complemento_visible;`,
+// {
+// replacements: { },
+// type: models.sequelize.QueryTypes.SELECT,
+// });
