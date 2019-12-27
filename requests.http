@@ -7,6 +7,12 @@ curl -X GET \
   -H 'postman-token: efb90a72-2718-d794-0aea-1a14f7af1b06'
 
 curl -X GET \
+  http://localhost:3456/api/users \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: efb90a72-2718-d794-0aea-1a14f7af1b06'
+
+curl -X GET \
   http://localhost:3456/api/2/posts \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \

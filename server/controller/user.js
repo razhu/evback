@@ -1,4 +1,5 @@
 const User = require('../models').User;
+const models = require('../models');
 
 module.exports = {
 
@@ -6,10 +7,11 @@ module.exports = {
 
         try {
 
-            const userCollection = await User.findAll({});
+            // const userCollection = await User.findAll({});
+            const userCollection = await models.sequelize.query(`select * from "Users";`, { replacements: { }, type: models.sequelize.QueryTypes.SELECT});
+            // const userCollection = await models.sequelize.query(`select * from "Users";`);
             console.log('----------> userCollection ', userCollection);
-
-            res.status(201).send(userCollection);
+            res.status(200).send(userCollection);
 
         }
         catch(e){
@@ -78,9 +80,7 @@ module.exports = {
 
 
 
-// return models.sequelize.query(`SELECT sum(pd.total_ganado_desp_duo) as total_ganado_desp_duo,
-// WHERE pd.fid_planilla IN (${idsPlanillas.join(',')})
-// GROUP BY nombres, paterno, materno, tipo_documento, nro_documento, complemento, fecha_nacimiento, estado_verificacion, complemento_visible;`,
+// return models.sequelize.query(`select * from `,
 // {
 // replacements: { },
 // type: models.sequelize.QueryTypes.SELECT,
